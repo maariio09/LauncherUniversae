@@ -4,10 +4,18 @@
  */
 package Main;
 
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author mario
  */
 public class Utilities {
-    
+    public static void PanelPrint(JPanel viewPanel, JPanel newPanel) {
+        viewPanel.removeAll();
+        viewPanel.add(newPanel, BorderLayout.CENTER);
+        viewPanel.revalidate();
+        viewPanel.repaint();
+    }
 }
