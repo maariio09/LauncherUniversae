@@ -44,7 +44,7 @@ public class LauncherBase extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LauncherButton0.png"))); // NOI18N
         jLabel2.setFocusable(false);
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 480, 420));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 110, 100));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo base.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
