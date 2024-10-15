@@ -15,6 +15,11 @@ public class LauncherBase extends javax.swing.JFrame {
      */
     public LauncherBase() {
         initComponents();
+        
+        this.setLocationRelativeTo(this);
+        
+        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel2, "src/images/LauncherButton0.png");
+        
     }
 
     /**
@@ -27,6 +32,7 @@ public class LauncherBase extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -34,27 +40,16 @@ public class LauncherBase extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel2.setMinimumSize(new java.awt.Dimension(1920, 1080));
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LauncherButton0.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 750, 440));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo base.png"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jLabel1.setMinimumSize(new java.awt.Dimension(1920, 1080));
         jLabel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +106,7 @@ public class LauncherBase extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
