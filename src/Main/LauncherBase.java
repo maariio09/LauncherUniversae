@@ -19,7 +19,7 @@ public class LauncherBase extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         
         rsscalelabel.RSScaleLabel.setScaleLabel(jLabel2, "src/images/LauncherButton0.png");
-         rsscalelabel.RSScaleLabel.setScaleLabel(jLabel3, "src/images/LauncherButton1.png");
+        rsscalelabel.RSScaleLabel.setScaleLabel(jLabel3, "src/images/LauncherButton1.png");
     }
 
     /**
