@@ -19,7 +19,7 @@ public class LauncherBase extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         
         rsscalelabel.RSScaleLabel.setScaleLabel(jLabel2, "src/images/LauncherButton0.png");
-        
+         rsscalelabel.RSScaleLabel.setScaleLabel(jLabel3, "src/images/LauncherButton1.png");
     }
 
     /**
@@ -32,6 +32,7 @@ public class LauncherBase extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -42,12 +43,16 @@ public class LauncherBase extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LauncherButton1.png"))); // NOI18N
+        jLabel3.setFocusable(false);
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 110, 100));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LauncherButton0.png"))); // NOI18N
         jLabel2.setFocusable(false);
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 110, 100));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 110, 100));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo base.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,6 +110,7 @@ public class LauncherBase extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
