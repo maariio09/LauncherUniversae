@@ -36,7 +36,7 @@ public class LauncherBase extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setRequestFocusEnabled(false);
 
-        jLabel1.setText("Hola");
+        jLabel1.setText("Adios");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
