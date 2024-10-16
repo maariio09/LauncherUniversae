@@ -4,6 +4,9 @@
  */
 package Main;
 
+import java.awt.Color;
+import java.awt.Dimension;
+
 /**
  *
  * @author mario
@@ -14,6 +17,13 @@ public class HomeView extends javax.swing.JPanel {
     
     public HomeView() {
         initComponents();
+        
+        Utilities.SetImageLabel(jLabel7, "src/Images/Grado0.png", new Dimension(381, 291));
+        Utilities.SetImageLabel(jLabel8, "src/Images/Grado1.png", new Dimension(381, 291));
+        Utilities.SetImageLabel(jLabel1, "src/Images/Grado2.png", new Dimension(381, 291));
+        Utilities.SetImageLabel(jLabel9, "src/Images/Grado3.png", new Dimension(381, 291));
+        Utilities.SetImageLabel(jLabel10, "src/Images/Grado4.png", new Dimension(381, 291));
+        Utilities.SetImageLabel(jLabel11, "src/Images/Grado5.png", new Dimension(381, 291));
     }
 
    
@@ -35,22 +45,14 @@ public class HomeView extends javax.swing.JPanel {
 
         MainPanel.setBackground(new java.awt.Color(10, 38, 72));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado2.png"))); // NOI18N
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado0.png"))); // NOI18N
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
         });
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado1.png"))); // NOI18N
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado3.png"))); // NOI18N
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado4.png"))); // NOI18N
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado5.png"))); // NOI18N
 
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
@@ -67,7 +69,7 @@ public class HomeView extends javax.swing.JPanel {
                         .addComponent(jLabel9)
                         .addGap(118, 118, 118)
                         .addComponent(jLabel10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1262, Short.MAX_VALUE)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel11))
@@ -86,7 +88,7 @@ public class HomeView extends javax.swing.JPanel {
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(706, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -105,6 +107,10 @@ public class HomeView extends javax.swing.JPanel {
         GameView game = parent.CreateGameView();
         Utilities.PanelPrint(parent.ViewPanel, game);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

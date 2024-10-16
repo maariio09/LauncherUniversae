@@ -31,7 +31,6 @@ public class GameView extends javax.swing.JPanel {
 
         MainPanel = new javax.swing.JPanel();
         imgprincipal = new javax.swing.JLabel();
-        imgprincipal1 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
         fondo1 = new javax.swing.JLabel();
         filled = new javax.swing.JLabel();
@@ -55,16 +54,9 @@ public class GameView extends javax.swing.JPanel {
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imgprincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgprincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque0.png"))); // NOI18N
         imgprincipal.setFocusable(false);
         imgprincipal.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         MainPanel.add(imgprincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 870, 520));
-
-        imgprincipal1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgprincipal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque1.png"))); // NOI18N
-        imgprincipal1.setFocusable(false);
-        imgprincipal1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        MainPanel.add(imgprincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 870, 520));
 
         fondo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
@@ -92,6 +84,11 @@ public class GameView extends javax.swing.JPanel {
         MainPanel.add(empty3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 520, -1, 19));
 
         flechader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha derecha.png"))); // NOI18N
+        flechader.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaderMouseClicked(evt);
+            }
+        });
         MainPanel.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 250, -1, -1));
 
         flechaizq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha izquierda.png"))); // NOI18N
@@ -125,6 +122,10 @@ public class GameView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void flechaderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaderMouseClicked
+
+    }//GEN-LAST:event_flechaderMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MainPanel;
@@ -141,7 +142,6 @@ public class GameView extends javax.swing.JPanel {
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel fondo1;
     private javax.swing.JLabel imgprincipal;
-    private javax.swing.JLabel imgprincipal1;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 
