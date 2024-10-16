@@ -22,34 +22,26 @@ public class LauncherBase extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(this);
-         this.setLocationRelativeTo(this);
         
-        SetImageLabel(jLabel2, "src/Images/LauncherButton0.png");
-        SetImageLabel(jLabel3, "src/Images/LauncherButton1.png");
-        SetImageLabel(jLabel4, "src/Images/LauncherButton2.png");
-        SetImageLabel(jLabel5, "src/Images/LauncherButton4.png");
-        SetImageLabel(jLabel6, "src/Images/LauncherButton3.png");
-        SetImageLabel(jLabel7, "src/Images/LauncherButton5.png");
-        SetImageLabel(jLabel8, "src/Images/LauncherButton6.png");
-        SetImageLabel(jLabel15, "src/Images/LauncherButton12.png");
-        SetImageLabel(jLabel10, "src/Images/LauncherButton7.png");
-        SetImageLabel(jLabel11, "src/Images/LauncherButton8.png");
-        SetImageLabel(jLabel12, "src/Images/LauncherButton9.png");
-        SetImageLabel(jLabel13, "src/Images/LauncherButton10.png");
-        SetImageLabel(jLabel14, "src/Images/LauncherButton11.png");
-        SetImageLabel(jLabel9, "src/Images/LauncherButton13.png");
-        
-         
-        
-        
+        JLabel[] labels = { jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, 
+                    jLabel7, jLabel8, jLabel15, jLabel10, jLabel11, 
+                    jLabel12, jLabel13, jLabel14, jLabel9 };
+
+        String[] imagePaths = { "src/Images/LauncherButton0.png", "src/Images/LauncherButton1.png", 
+                        "src/Images/LauncherButton2.png", "src/Images/LauncherButton4.png", 
+                        "src/Images/LauncherButton3.png", "src/Images/LauncherButton5.png", 
+                        "src/Images/LauncherButton6.png", "src/Images/LauncherButton12.png", 
+                        "src/Images/LauncherButton7.png", "src/Images/LauncherButton8.png", 
+                        "src/Images/LauncherButton9.png", "src/Images/LauncherButton10.png", 
+                        "src/Images/LauncherButton11.png", "src/Images/LauncherButton13.png" };
 
 
-        
+        for (int i = 0; i < labels.length; i++) {
+        SetImageLabel(labels[i], imagePaths[i]);
+        }
+
         HomeView home = CreateHomeView();
         Utilities.PanelPrint(ViewPanel, home);
-  
-    
-        
         
       }
     
