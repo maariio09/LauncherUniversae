@@ -15,7 +15,7 @@ public class GameView extends javax.swing.JPanel {
         initComponents();
         
      
-     Utilities.SetImageLabel(jLabel1, "src/Images/Embarque0.png", new Dimension(891, 525));
+     Utilities.SetImageLabel(imgprincipal, "src/Images/Embarque0.png", new Dimension(891, 525));
     }
     
      
@@ -30,8 +30,10 @@ public class GameView extends javax.swing.JPanel {
     private void initComponents() {
 
         MainPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        imgprincipal = new javax.swing.JLabel();
+        imgprincipal1 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
+        fondo1 = new javax.swing.JLabel();
         filled = new javax.swing.JLabel();
         empty = new javax.swing.JLabel();
         empty1 = new javax.swing.JLabel();
@@ -52,37 +54,48 @@ public class GameView extends javax.swing.JPanel {
         MainPanel.setPreferredSize(new java.awt.Dimension(1540, 880));
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque0.png"))); // NOI18N
-        jLabel1.setFocusable(false);
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 870, 520));
+        imgprincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgprincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque0.png"))); // NOI18N
+        imgprincipal.setFocusable(false);
+        imgprincipal.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        MainPanel.add(imgprincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 870, 520));
+
+        imgprincipal1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imgprincipal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque1.png"))); // NOI18N
+        imgprincipal1.setFocusable(false);
+        imgprincipal1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        MainPanel.add(imgprincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 870, 520));
 
         fondo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
         fondo.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        MainPanel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 790, 440));
+        MainPanel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 790, 440));
+
+        fondo1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
+        fondo1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        MainPanel.add(fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 790, 440));
 
         filled.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselFilled.png"))); // NOI18N
-        MainPanel.add(filled, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 550, -1, 19));
+        MainPanel.add(filled, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, -1, 19));
 
         empty.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 550, -1, 19));
+        MainPanel.add(empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 19));
 
         empty1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, -1, 19));
+        MainPanel.add(empty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, 19));
 
         empty2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 550, -1, 19));
+        MainPanel.add(empty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 520, -1, 19));
 
         empty3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 550, -1, 19));
+        MainPanel.add(empty3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 520, -1, 19));
 
         flechader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha derecha.png"))); // NOI18N
-        MainPanel.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 270, -1, -1));
+        MainPanel.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 250, -1, -1));
 
         flechaizq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha izquierda.png"))); // NOI18N
-        MainPanel.add(flechaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
+        MainPanel.add(flechaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
 
         barrita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Barrita aislada descripción.png"))); // NOI18N
         MainPanel.add(barrita, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 583, -1, -1));
@@ -126,7 +139,9 @@ public class GameView extends javax.swing.JPanel {
     private javax.swing.JLabel flechader;
     private javax.swing.JLabel flechaizq;
     private javax.swing.JLabel fondo;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel fondo1;
+    private javax.swing.JLabel imgprincipal;
+    private javax.swing.JLabel imgprincipal1;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 
