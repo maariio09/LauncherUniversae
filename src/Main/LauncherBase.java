@@ -45,6 +45,7 @@ public class LauncherBase extends javax.swing.JFrame {
         
       }
     
+    
     public final GameView CreateGameView() {
        GameView game = new GameView();
         game.parent = this;
