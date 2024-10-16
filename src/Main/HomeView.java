@@ -38,6 +38,11 @@ public class HomeView extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado2.png"))); // NOI18N
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado0.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Grado1.png"))); // NOI18N
 
@@ -95,6 +100,11 @@ public class HomeView extends javax.swing.JPanel {
             .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        GameView game = parent.CreateGameView();
+        Utilities.PanelPrint(parent.ViewPanel, game);
+    }//GEN-LAST:event_jLabel7MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

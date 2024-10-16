@@ -1,36 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Main;
 
+import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-/**
- *
- * @author mario
- */
 public class GameView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form GameView
-     */
+ 
+    
+    public LauncherBase parent; 
     public GameView() {
         initComponents();
         
-        this.setLocationRelativeTo(this);
-            SetImageLabel(fondo, "src/Images/Embarque0.png");
+     
+     Utilities.SetImageLabel(jLabel1, "src/Images/Embarque0.png", new Dimension(891, 525));
     }
     
-     private void SetImageLabel (JLabel labelName, String root) {
-            ImageIcon image = new ImageIcon(root);
-            Icon icon = new ImageIcon (image.getImage() .getScaledInstance (labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
-            labelName.setIcon(icon);
-            this.repaint();
-    }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -63,31 +51,38 @@ public class GameView extends javax.swing.JPanel {
         MainPanel.setMinimumSize(new java.awt.Dimension(1540, 880));
         MainPanel.setPreferredSize(new java.awt.Dimension(1540, 880));
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 690, 460));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque0.png"))); // NOI18N
+        jLabel1.setFocusable(false);
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 870, 520));
+
+        fondo.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
-        MainPanel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 72, 765, 421));
+        fondo.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        MainPanel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 790, 440));
 
         filled.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselFilled.png"))); // NOI18N
-        MainPanel.add(filled, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 520, -1, 19));
+        MainPanel.add(filled, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 550, -1, 19));
 
         empty.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 19));
+        MainPanel.add(empty, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 550, -1, 19));
 
         empty1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, 19));
+        MainPanel.add(empty1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, -1, 19));
 
         empty2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 520, -1, 19));
+        MainPanel.add(empty2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 550, -1, 19));
 
         empty3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PuntoCarruselEmpty.png"))); // NOI18N
-        MainPanel.add(empty3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 520, -1, 19));
+        MainPanel.add(empty3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 550, -1, 19));
 
         flechader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha derecha.png"))); // NOI18N
-        MainPanel.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1155, 269, -1, -1));
+        MainPanel.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 270, -1, -1));
 
         flechaizq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Flecha izquierda.png"))); // NOI18N
-        MainPanel.add(flechaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 271, -1, -1));
+        MainPanel.add(flechaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
         barrita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Barrita aislada descripción.png"))); // NOI18N
         MainPanel.add(barrita, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 583, -1, -1));
@@ -135,8 +130,6 @@ public class GameView extends javax.swing.JPanel {
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 
-    private void setLocationRelativeTo(GameView aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 
 }

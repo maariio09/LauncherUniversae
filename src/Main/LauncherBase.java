@@ -22,6 +22,7 @@ public class LauncherBase extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(this);
+         this.setLocationRelativeTo(this);
         
         SetImageLabel(jLabel2, "src/Images/LauncherButton0.png");
         SetImageLabel(jLabel3, "src/Images/LauncherButton1.png");
@@ -46,7 +47,23 @@ public class LauncherBase extends javax.swing.JFrame {
         
         HomeView home = CreateHomeView();
         Utilities.PanelPrint(ViewPanel, home);
+  
+    
+        
+        
+      }
+    
+    public final GameView CreateGameView() {
+       GameView game = new GameView();
+        game.parent = this;
+        game.setSize(ViewPanel.getSize());
+        game.setLocation(0, 0);
+        return game;
     }
+    
+    
+    
+    
     
     public final HomeView CreateHomeView() {
         HomeView home = new HomeView();
@@ -55,6 +72,8 @@ public class LauncherBase extends javax.swing.JFrame {
         home.setLocation(0, 0);
         return home;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -237,7 +256,7 @@ public class LauncherBase extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     private javax.swing.JPanel MainPanel;
-    private javax.swing.JPanel ViewPanel;
+    public javax.swing.JPanel ViewPanel;
     private javax.swing.JLabel bg;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -254,4 +273,6 @@ public class LauncherBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
+
+
 }
