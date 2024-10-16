@@ -4,6 +4,11 @@
  */
 package Main;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author mario
@@ -15,6 +20,16 @@ public class GameView extends javax.swing.JPanel {
      */
     public GameView() {
         initComponents();
+        
+        this.setLocationRelativeTo(this);
+            SetImageLabel(fondo, "src/Images/Embarque0.png");
+    }
+    
+     private void SetImageLabel (JLabel labelName, String root) {
+            ImageIcon image = new ImageIcon(root);
+            Icon icon = new ImageIcon (image.getImage() .getScaledInstance (labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
+            labelName.setIcon(icon);
+            this.repaint();
     }
 
     /**
@@ -48,9 +63,7 @@ public class GameView extends javax.swing.JPanel {
         MainPanel.setMinimumSize(new java.awt.Dimension(1540, 880));
         MainPanel.setPreferredSize(new java.awt.Dimension(1540, 880));
         MainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Embarque0.png"))); // NOI18N
-        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 690, 460));
+        MainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 690, 460));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
         MainPanel.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 72, 765, 421));
@@ -121,4 +134,9 @@ public class GameView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
+
+    private void setLocationRelativeTo(GameView aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
