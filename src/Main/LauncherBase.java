@@ -79,9 +79,9 @@ public class LauncherBase extends javax.swing.JFrame {
         HeaderLayout.setHorizontalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HeaderLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(40, 40, 40)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1434, Short.MAX_VALUE))
+                .addContainerGap(1400, Short.MAX_VALUE))
             .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(HeaderLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -90,10 +90,10 @@ public class LauncherBase extends javax.swing.JFrame {
         );
         HeaderLayout.setVerticalGroup(
             HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+            .addGroup(HeaderLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(HeaderLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
