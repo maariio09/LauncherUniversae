@@ -28,6 +28,7 @@ public class GameView extends javax.swing.JPanel {
 
         MainPanel = new javax.swing.JPanel();
         fondo = new javax.swing.JLabel();
+        fondo1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(10, 38, 72));
 
@@ -38,13 +39,20 @@ public class GameView extends javax.swing.JPanel {
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
 
+        fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Cuadrado fondo enfocado.png"))); // NOI18N
+
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
         MainPanelLayout.setHorizontalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainPanelLayout.createSequentialGroup()
-                .addGap(377, 377, 377)
-                .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addGap(377, 377, 377)
+                        .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addGap(523, 523, 523)
+                        .addComponent(fondo1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(398, Short.MAX_VALUE))
         );
         MainPanelLayout.setVerticalGroup(
@@ -52,7 +60,9 @@ public class GameView extends javax.swing.JPanel {
             .addGroup(MainPanelLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(fondo1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(242, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -71,5 +81,6 @@ public class GameView extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MainPanel;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel fondo1;
     // End of variables declaration//GEN-END:variables
 }
