@@ -45,6 +45,7 @@ public class LauncherBase extends javax.swing.JFrame {
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         MainPanel.setMaximumSize(new java.awt.Dimension(1920, 1080));
         MainPanel.setMinimumSize(new java.awt.Dimension(1920, 1080));
@@ -104,7 +105,7 @@ public class LauncherBase extends javax.swing.JFrame {
         MainPanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 1550, 130));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo base.png"))); // NOI18N
-        MainPanel.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        MainPanel.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
