@@ -5,6 +5,7 @@
 package Main;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -51,11 +52,13 @@ public class LauncherBase extends javax.swing.JFrame {
         @Override
         public void mouseEntered(MouseEvent entered) {
             System.out.println("Has entrado al icono del curso");
+            jLabel2.setSize(120, 120);
         }
 
         @Override
         public void mouseExited(MouseEvent entered) {
             System.out.println("Has salido del icono del curso");
+            jLabel2.setSize(100, 100);
         }
     });
 }
