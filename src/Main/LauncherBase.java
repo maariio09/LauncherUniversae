@@ -4,7 +4,10 @@
  */
 package Main;
 
+import java.awt.Color;
 import java.awt.Image;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -38,8 +41,24 @@ public class LauncherBase extends javax.swing.JFrame {
 
         for (int i = 0; i < labels.length; i++) {
         SetImageLabel(labels[i], rutamagenes[i]);
+        
+        labels[i].addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent entered) {
+            System.out.println("Prueba click");
+        }
+        
+        @Override
+        public void mouseEntered(MouseEvent entered) {
+            System.out.println("Has entrado al icono del curso");
         }
 
+        @Override
+        public void mouseExited(MouseEvent entered) {
+            System.out.println("Has salido del icono del curso");
+        }
+    });
+}
         HomeView home = CreateHomeView();
         Utilities.PanelPrint(ViewPanel, home);
         
@@ -52,10 +71,6 @@ public class LauncherBase extends javax.swing.JFrame {
         game.setLocation(0, 0);
         return game;
     }
-    
-    
-    
-    
     
     public final HomeView CreateHomeView() {
         HomeView home = new HomeView();
