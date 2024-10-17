@@ -27,7 +27,7 @@ public class LauncherBase extends javax.swing.JFrame {
                     jLabel7, jLabel8, jLabel15, jLabel10, jLabel11, 
                     jLabel12, jLabel13, jLabel14, jLabel9 };
 
-        String[] imagePaths = { "src/Images/LauncherButton0.png", "src/Images/LauncherButton1.png", 
+        String[] rutaImagenes = { "src/Images/LauncherButton0.png", "src/Images/LauncherButton1.png", 
                         "src/Images/LauncherButton2.png", "src/Images/LauncherButton4.png", 
                         "src/Images/LauncherButton3.png", "src/Images/LauncherButton5.png", 
                         "src/Images/LauncherButton6.png", "src/Images/LauncherButton12.png", 
@@ -37,7 +37,7 @@ public class LauncherBase extends javax.swing.JFrame {
 
 
         for (int i = 0; i < labels.length; i++) {
-        SetImageLabel(labels[i], imagePaths[i]);
+        SetImageLabel(labels[i], rutaImagenes[i]);
         }
 
         HomeView home = CreateHomeView();
