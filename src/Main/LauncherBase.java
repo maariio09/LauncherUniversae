@@ -32,36 +32,41 @@ public class LauncherBase extends javax.swing.JFrame {
                     jLabel12, jLabel13, jLabel14, jLabel9 };
 
         String[] rutamagenes = { "src/Images/LauncherButton0.png", "src/Images/LauncherButton1.png", 
-                        "src/Images/LauncherButton2.png", "src/Images/LauncherButton4.png", 
-                        "src/Images/LauncherButton3.png", "src/Images/LauncherButton5.png", 
-                        "src/Images/LauncherButton6.png", "src/Images/LauncherButton12.png", 
-                        "src/Images/LauncherButton7.png", "src/Images/LauncherButton8.png", 
-                        "src/Images/LauncherButton9.png", "src/Images/LauncherButton10.png", 
-                        "src/Images/LauncherButton11.png", "src/Images/LauncherButton13.png" };
-
+                        "src/Images/LauncherButton2.png", "src/Images/LauncherButton3.png", 
+                        "src/Images/LauncherButton4.png", "src/Images/LauncherButton5.png", 
+                        "src/Images/LauncherButton6.png", "src/Images/LauncherButton7.png", 
+                        "src/Images/LauncherButton8.png", "src/Images/LauncherButton9.png", 
+                        "src/Images/LauncherButton10.png", "src/Images/LauncherButton11.png", 
+                        "src/Images/LauncherButton12.png", "src/Images/LauncherButton13.png" };
 
         for (int i = 0; i < labels.length; i++) {
-        SetImageLabel(labels[i], rutamagenes[i]);
-        
-        labels[i].addMouseListener(new MouseAdapter() {
-        @Override
-        public void mouseClicked(MouseEvent entered) {
-            System.out.println("Prueba click");
+            Utilities.SetImageLabel(labels[i], rutamagenes[i], new Dimension(85, 85));
         }
         
-        @Override
-        public void mouseEntered(MouseEvent entered) {
-            System.out.println("Has entrado al icono del curso");
-            jLabel2.setSize(120, 120);
-        }
+        for (int i = 0; i < labels.length; i++) {
+            final int indexgrado = i;
+        
+            labels[i].addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent entered) {
+                    System.out.println("Prueba click");
+                }
 
-        @Override
-        public void mouseExited(MouseEvent entered) {
-            System.out.println("Has salido del icono del curso");
-            jLabel2.setSize(100, 100);
+                @Override
+                public void mouseEntered(MouseEvent entered) {
+                    System.out.println("Has entrado al icono del curso");
+                    Utilities.SetImageLabel(labels[indexgrado], "src/Images/LauncherButton" + indexgrado + ".png", new Dimension(90, 90));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent entered) {
+                    System.out.println("Has salido del icono del curso");
+                    Utilities.SetImageLabel(labels[indexgrado], "src/Images/LauncherButton" + indexgrado + ".png", new Dimension(85, 85));
+                }
+            });
         }
-    });
-}
+        
+        
         HomeView home = CreateHomeView();
         Utilities.PanelPrint(ViewPanel, home);
         
@@ -129,91 +134,63 @@ public class LauncherBase extends javax.swing.JFrame {
         MainPanel.add(ViewPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 1540, 880));
 
         Header.setOpaque(false);
+        Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel12.setFocusable(false);
+        jLabel12.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(968, 15, -1, -1));
 
         jLabel11.setFocusable(false);
+        jLabel11.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(855, 15, -1, -1));
 
         jLabel10.setFocusable(false);
+        jLabel10.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 15, -1, -1));
 
         jLabel9.setFocusable(false);
+        jLabel9.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1388, 15, -1, -1));
 
         jLabel8.setFocusable(false);
+        jLabel8.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 15, -1, -1));
 
         jLabel7.setFocusable(false);
+        jLabel7.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 15, -1, -1));
 
         jLabel6.setFocusable(false);
+        jLabel6.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 15, -1, -1));
 
         jLabel5.setFocusable(false);
+        jLabel5.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 15, -1, -1));
 
         jLabel4.setFocusable(false);
+        jLabel4.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 15, -1, -1));
 
         jLabel3.setFocusable(false);
+        jLabel3.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 15, -1, -1));
 
         jLabel2.setFocusable(false);
+        jLabel2.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 15, -1, -1));
 
         jLabel13.setFocusable(false);
+        jLabel13.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1073, 15, -1, -1));
 
         jLabel14.setFocusable(false);
+        jLabel14.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1178, 15, -1, -1));
 
         jLabel15.setFocusable(false);
-
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94))
-        );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        jLabel15.setPreferredSize(new java.awt.Dimension(85, 85));
+        Header.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1283, 15, -1, -1));
 
         MainPanel.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 1550, 130));
 
