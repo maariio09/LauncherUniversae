@@ -244,6 +244,7 @@ public class LauncherBase extends javax.swing.JFrame {
         });
     }
 
+    
     private void SetImageLabel (JLabel labelName, String root) {
             ImageIcon image = new ImageIcon(root);
             Icon icon = new ImageIcon (image.getImage() .getScaledInstance (labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
